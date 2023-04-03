@@ -1,9 +1,9 @@
 # ChatGPT extension for VSCode
 
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/timkmecl.chatgpt)](https://marketplace.visualstudio.com/items?itemName=timkmecl.chatgpt)
-[![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/timkmecl.chatgpt)](https://marketplace.visualstudio.com/items?itemName=timkmecl.chatgpt)
-[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/timkmecl.chatgpt)](https://marketplace.visualstudio.com/items?itemName=timkmecl.chatgpt)
-[![Github stars](https://img.shields.io/github/stars/timkmecl/chatgpt-vscode)](https://github.com/timkmecl/chatgpt-vscode)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/raulgonzalezdev.chatgpt)](https://marketplace.visualstudio.com/items?itemName=raulgonzalezdev.chatgpt)
+[![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/raulgonzalezdev.chatgpt)](https://marketplace.visualstudio.com/items?itemName=raulgonzalezdev.chatgpt)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/raulgonzalezdev.chatgpt)](https://marketplace.visualstudio.com/items?itemName=raulgonzalezdev.chatgpt)
+[![Github stars](https://img.shields.io/github/stars/raulgonzalezdev/chatgpt-vscode)](https://github.com/raulgonzalezdev/chatgpt-vscode)
 
 This Visual Studio Code extension allows you to use the [ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api) to generate code or natural language responses from OpenAI's [ChatGPT](https://chat.openai.com/chat) to your questions, right within the editor.
 
@@ -11,12 +11,12 @@ Supercharge your coding with AI-powered assistance! Automatically write new code
  
 *📢 **Extension now uses official ChatGPT API!** This however means that using the extension now spends your OpenAI account's credits (0.002$/1k tokens). If you don't have any credits on your account, you will receive an error.*
 
-*To use the free codex models try [version using GPT3](https://github.com/timkmecl/codegpt) instead ([marketplace](https://marketplace.visualstudio.com/items?itemName=timkmecl.codegpt3), [github](https://github.com/timkmecl/codegpt))*
+*To use the free codex models try [version using GPT3](https://github.com/raulgonzalezdev/codegpt) instead ([marketplace](https://marketplace.visualstudio.com/items?itemName=raulgonzalezdev.codegpt3), [github](https://github.com/raulgonzalezdev/codegpt))*
 
 ### Links:
 
-- **[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=timkmecl.chatgpt)**
-- **[Github Repository](https://github.com/timkmecl/chatgpt-vscode)**
+- **[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=raulgonzalezdev.chatgpt)**
+- **[Github Repository](https://github.com/raulgonzalezdev/chatgpt-vscode)**
 
 <br>
 
@@ -128,11 +128,11 @@ If you aren't satisfied with an answer and would like to **retry the request**, 
 
 ---
 
-Please note that this extension is currently a proof of concept and may have some limitations or bugs. We welcome feedback and contributions to improve the extension. Also check out [CodeGPT](https://github.com/timkmecl/codegpt) extension that uses official OpenAI API and also supports other GPT3 models.
-If you enjoy this extension, please consider [buying me a coffee ☕️](https://www.buymeacoffee.com/timkmecl) to support my work! 
+Please note that this extension is currently a proof of concept and may have some limitations or bugs. We welcome feedback and contributions to improve the extension. Also check out [CodeGPT](https://github.com/raulgonzalezdev/codegpt) extension that uses official OpenAI API and also supports other GPT3 models.
+If you enjoy this extension, please consider [buying me a coffee ☕️](https://www.buymeacoffee.com/raulgonzalezdev) to support my work! 
 
 
-<a href="https://www.buymeacoffee.com/timkmecl" target="_blank"><img src="resources/buy-default-yellow-small.png" alt="Buy Me A Coffee" style="height: 40px" ></a>
+<a href="https://www.buymeacoffee.com/raulgonzalezdev" target="_blank"><img src="resources/buy-default-yellow-small.png" alt="Buy Me A Coffee" style="height: 40px" ></a>
 
 
 ## Credits
