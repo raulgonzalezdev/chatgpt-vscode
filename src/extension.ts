@@ -18,6 +18,51 @@ function openSettings() {
   );
 }
 
+
+interface OpenAIResponse {
+	choices: Array<{
+	  text: string;
+	}>;
+  }
+  
+   async function chatGptRequest(
+	prompt: string
+  ): Promise<{ label: string; code: string; comment: string }[]> {
+	const config = vscode.workspace.getConfiguration("chatgpt");
+	const apiKey = config.get("apiKey");
+  
+	const response = await fetch(
+	  "https://api.openai.com/v1/engines/davinci-codex/completions",
+	  {
+		method: "POST",
+		headers: {
+		  "Content-Type": "application/json",
+		  Authorization: `Bearer ${apiKey}`,
+		},
+		body: JSON.stringify({
+		  prompt: prompt,
+		  max_tokens: 100,
+		  n: 3,
+		  stop: ["\n"],
+		  temperature: 0.5,
+		}),
+	  }
+	);
+  
+	if (!response.ok) {
+	  throw new Error("Failed to fetch data from ChatGPT");
+	}
+  
+	const data = (await response.json()) as OpenAIResponse;
+	const suggestions = data.choices.map((choice) => ({
+	  label: choice.text.trim(),
+	  code: choice.text.trim(),
+	  comment: "", // Aquí puedes agregar comentarios si es necesario
+	}));
+  
+	return suggestions;
+  }
+
 export function activate(context: vscode.ExtensionContext) {
   console.log('activating extension "chatgpt"');
   // Get the settings from the extension's configuration
@@ -206,49 +251,6 @@ class ChatGPTCompletionItemProvider implements vscode.CompletionItemProvider {
   }
 }
 
-interface OpenAIResponse {
-  choices: Array<{
-    text: string;
-  }>;
-}
-
-async function chatGptRequest(
-  prompt: string
-): Promise<{ label: string; code: string; comment: string }[]> {
-  const config = vscode.workspace.getConfiguration("chatgpt");
-  const apiKey = config.get("apiKey");
-
-  const response = await fetch(
-    "https://api.openai.com/v1/engines/davinci-codex/completions",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        prompt: prompt,
-        max_tokens: 100,
-        n: 3,
-        stop: ["\n"],
-        temperature: 0.5,
-      }),
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch data from ChatGPT");
-  }
-
-  const data = (await response.json()) as OpenAIResponse;
-  const suggestions = data.choices.map((choice) => ({
-    label: choice.text.trim(),
-    code: choice.text.trim(),
-    comment: "", // Aquí puedes agregar comentarios si es necesario
-  }));
-
-  return suggestions;
-}
 
 class ChatGPTViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "chatgpt.chatView";
